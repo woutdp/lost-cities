@@ -1,5 +1,5 @@
 <script>
-  import Counter from './Counter.svelte'
+  import ExpeditionsCalculator from './ExpeditionsCalculator.svelte'
   import welcome from '$lib/images/svelte-welcome.webp'
   import welcome_fallback from '$lib/images/svelte-welcome.png'
 </script>
@@ -9,4 +9,7 @@
   <meta name="description" content="A scoring calculator for the game lost cities" />
 </svelte:head>
 
-<h1>Lost Cities Calculator</h1>
+<div class="container mx-auto">
+  <h1 class="text-4xl font-bold pb-4 pt-4">Lost Cities Calculator</h1>
+  <ExpeditionsCalculator />
+</div>
