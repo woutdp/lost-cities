@@ -1,12 +1,14 @@
 <script lang="ts">
   import Expedition from './Expedition.svelte'
+
+  export let player: number = 0
 </script>
 
-<div class="flex flex-col">
-  <Expedition name="Mountains" color="white" />
-  <Expedition name="Desert" color="yellow" />
-  <Expedition name="Volcano" color="red" />
-  <Expedition name="Sea" color="blue" />
-  <Expedition name="Jungle" color="green" />
-  <Expedition name="Meteor" color="purple" />
+<div class="flex gap-2">
+  <Expedition {player} name="Mountains" color="white" />
+  <Expedition {player} name="Volcano" color="red" />
+  <Expedition {player} name="Desert" color="yellow" />
+  <Expedition {player} name="Jungle" color="green" />
+  <Expedition {player} name="Sea" color="blue" />
+  <Expedition {player} name="Meteor" color="purple" />
 </div>

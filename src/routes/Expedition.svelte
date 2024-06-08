@@ -3,6 +3,7 @@
 
   export let color: string
   export let name: string
+  export let player: number
 
   // let colorMap = {
   //   yellow: { bg: 'bg-yellow', text: 'text-yellow' },
@@ -15,20 +16,24 @@
 
   // $: background = colorMap[color].bg
   // $: text = colorMap[color].text
+  // handshake1 =
+
+  let score = 0
 </script>
 
-<h2 class={`text-${color} text-2xl`}>{name}</h2>
-<div class="flex items-center gap-2">
-  <Card {color} type="handshake" />
-  <Card {color} type="handshake" />
-  <Card {color} type="handshake" />
-  <Card {color} type="number" value={2} />
-  <Card {color} type="number" value={3} />
-  <Card {color} type="number" value={4} />
-  <Card {color} type="number" value={5} />
-  <Card {color} type="number" value={6} />
-  <Card {color} type="number" value={7} />
-  <Card {color} type="number" value={8} />
-  <Card {color} type="number" value={9} />
-  <Card {color} type="number" value={10} />
+<!-- <h2 class={`text-${color} pt-2`}>{name}</h2> -->
+<div class="flex flex-col items-center gap-2 relative">
+  <Card {player} {color} value={0} id="1" />
+  <Card {player} {color} value={0} id="2" />
+  <Card {player} {color} value={0} id="3" />
+  <Card {player} {color} value={2} />
+  <Card {player} {color} value={3} />
+  <Card {player} {color} value={4} />
+  <Card {player} {color} value={5} />
+  <Card {player} {color} value={6} />
+  <Card {player} {color} value={7} />
+  <Card {player} {color} value={8} />
+  <Card {player} {color} value={9} />
+  <Card {player} {color} value={10} />
+  <p class="text-xl">{score}</p>
 </div>

@@ -4,7 +4,9 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   safelist: [
-    { pattern: /(peer-checked:|)(peer|border|bg|text)-(red|green|blue|yellow|white|purple)/ },
+    {
+      pattern: /(peer-checked:|hover:|)(peer|border|bg|text)-(red|green|blue|yellow|white|purple)/,
+    },
   ],
   theme: {
     extend: {

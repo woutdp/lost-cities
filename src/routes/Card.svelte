@@ -1,25 +1,28 @@
 <script lang="ts">
   import Handshake from './Handshake.svelte'
-  export let type: string
+
   export let color: string
   export let value: number = 0
+  export let player: number = 0
+  export let id: number = 0
 
-  $: id = `${color}-${type}-${value}`
+  $: identifier = `${id}:${player}-${color}-${value}`
 
-  let checked
+  export let checked: boolean
+  export let score: number
 </script>
 
-<input {id} name={id} type="checkbox" class="hidden peer" bind:checked />
+<input id={identifier} name={identifier} type="checkbox" class="hidden peer" bind:checked />
 <label
-  for={id}
+  for={identifier}
   class={`
-    ${checked ? `bg-${color} text-brown` : `text-${color}`}
+    ${checked ? `bg-${color} text-brown` : `text-${color} hover:bg-${color} hover:bg-opacity-10`}
     border-2 border-${color} rounded aspect-[2/3] min-w-16 cursor-pointer flex justify-center items-center text-3xl transition duration-75
   `}
 >
-  {#if type === 'number'}
-    {value}
-  {:else}
+  {#if value === 0}
     <Handshake />
+  {:else}
+    {value}
   {/if}
 </label>
