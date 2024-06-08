@@ -20,15 +20,7 @@
     in {
       devShells = forEachSupportedSystem ({ pkgs }: {
         default = pkgs.mkShell {
-          packages = with pkgs; [
-            node2nix
-            nodejs
-            pnpm
-            yarn
-            libuuid
-            wrangler
-            nodePackages.wrangler
-          ];
+          packages = with pkgs; [ node2nix nodejs pnpm yarn libuuid ];
           env = {
             LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [ pkgs.libuuid ];
           };
