@@ -9,6 +9,8 @@ export function parseQueryParams(params: URLSearchParams) {
 
 function parsePlayer(playerString: string): string[] {
   return playerString
+    .replace(/ /g, '')
+    .toLowerCase()
     .split(',')
     .filter(Boolean)
     .filter((card) => isCard(card))

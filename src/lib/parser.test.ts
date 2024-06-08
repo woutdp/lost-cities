@@ -56,6 +56,22 @@ describe.concurrent('parseQueryParams', () => {
       player2: ['b3'],
     })
   })
+
+  it('accept uppercase', async ({ expect }) => {
+    const params = 'p1=B2,B3,B4'
+    expect(parseQueryParams(new URLSearchParams(params))).toEqual({
+      player1: ['b2', 'b3', 'b4'],
+      player2: [],
+    })
+  })
+
+  it('remove spaces', async ({ expect }) => {
+    const params = 'p1=b2, b4, b6'
+    expect(parseQueryParams(new URLSearchParams(params))).toEqual({
+      player1: ['b2', 'b4', 'b6'],
+      player2: [],
+    })
+  })
 })
 
 describe.concurrent('validate', () => {
