@@ -1,5 +1,6 @@
 <script lang="ts">
   import Handshake from './Handshake.svelte'
+  import { uncheck } from './+page.svelte'
   // import { onDestroy } from 'svelte'
   import { get } from 'svelte/store'
   import { cards } from '$lib/store'
@@ -21,40 +22,11 @@
     if (id <= handshakeCount) checked = true
   } else checked = $cards[player].includes(card)
 
-  // console.log(get(cards)[player].includes(card))
-
-  // $: checked = hasCard(player, card)
   $: result = (checked && card) || null
-  // $: {
-  //   // if (id) {
-  //   // let handshakeCount = $cards[player].filter((v) => v === card).length
-  //   // if (id > handshakeCount) checked = false
-  // if (!$cards[player].includes(card)) checked = false
-  //   // const playerCards = $cards[player]
-  //   // console.log(playerCards)
-  //   // console.log(player)
-  //   // if
-  //   //   // (player)
-  //   //   // console.log(playerCards)
-  //   //
-  //   //   // checked = {}
-  // }
-
-  // export function hasCard(player: number, card: string) {
-  //   const cardsForPlayer = getPlayerCards(player)
-  //   return cardsForPlayer.includes(card)
-  // }
-  //
-  // function getPlayerCards(player: number): string[] {
-  //   if (player == 1) return get(cards).player1
-  //   if (player == 2) return get(cards).player2
-  //   return []
-  // }
-
-  // const unsubscribe = cards.subscribe(cards => {
-  // if (!hasCard(player, card)) checked = false
-  // });
-  // onDestroy(unsubscribe);
+  $: if ($uncheck) {
+    console.log($uncheck)
+    checked = false
+  }
 </script>
 
 <input id={identifier} name={identifier} type="checkbox" class="group peer hidden" bind:checked />
