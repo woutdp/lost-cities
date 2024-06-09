@@ -2,6 +2,8 @@
   version="1.1"
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="100%"
+  height="100%"
   x="0px"
   y="0px"
   viewBox="292.192 136.948 606.162 399.592"

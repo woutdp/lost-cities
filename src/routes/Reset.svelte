@@ -2,22 +2,19 @@
   import { cards } from '$lib/store'
 
   export let reset
-
-  function handleClick() {
-    // cards.set({ player1: [], player2: [] })
-    reset()
-  }
 </script>
 
 <button
   class="flex aspect-[1/1] w-24 items-center justify-center text-brown-50"
-  on:click|preventDefault={handleClick}
+  on:click|preventDefault={reset}
 >
   <svg
     fill="currentColor"
     stroke="currentColor"
     viewBox="0 0 21 21"
     xmlns="http://www.w3.org/2000/svg"
+    width="100%"
+    height="100%"
   >
     <g
       fill="none"
