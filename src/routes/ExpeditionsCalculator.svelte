@@ -1,7 +1,7 @@
 <script lang="ts">
   import Expedition from './Expedition.svelte'
 
-  export let player: number = 0
+  export let player: string
   export let selectedCards = []
 
   let w = []
@@ -14,7 +14,7 @@
   $: selectedCards = [...w, ...r, ...y, ...g, ...b, ...p]
 </script>
 
-<div class="flex gap-1 sm:gap-2 justify-between h-dvh">
+<div class="flex flex-grow gap-1 sm:gap-2">
   <Expedition {player} bind:selectedCards={w} name="Mountains" color="white" />
   <Expedition {player} bind:selectedCards={r} name="Volcano" color="red" />
   <Expedition {player} bind:selectedCards={y} name="Desert" color="yellow" />

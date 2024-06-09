@@ -11,7 +11,7 @@ interface Expeditions {
 
 interface PlayerScore {
   score: number
-  expeditions: Expeditions
+  // expeditions: Expeditions
 }
 
 interface Score {
@@ -56,4 +56,4 @@ function extractExpeditions(cards: string[]): Expeditions {
   return Object.groupBy(cards, (card) => getColor(card))
 }
 
-const sum = (values: number[]) => values.reduce((a, b) => a + b, 0)
+export const sum = (values: number[]) => values.reduce((a, b) => a + b, 0)

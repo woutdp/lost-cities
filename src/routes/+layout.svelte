@@ -2,6 +2,6 @@
   import '../app.css'
 </script>
 
-<main class="bg-brown min-h-screen text-white font-serif font-bold">
+<main class="min-h-screen bg-brown font-serif font-bold text-white">
   <slot />
 </main>
