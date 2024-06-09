@@ -6,7 +6,7 @@ export default {
   safelist: [
     {
       pattern:
-        /(peer-checked:|)(peer|border|bg|text)-(gray|red|green|blue|yellow|white|pure-white|purple)(|-50|-100|-200|-300|-400|-500|-600|-700-|800|-950|-950)/,
+        /(peer-checked:|peer-hover:|)(peer|border|bg|text)-(gray|red|green|blue|yellow|white|pure-white|purple)(|-50|-100|-200|-300|-400|-500|-600|-700-|800|-950|-950)/,
     },
   ],
   theme: {
@@ -100,18 +100,18 @@ export default {
           950: '#092a0b',
         },
         red: {
-          DEFAULT: '#ff4500',
-          50: '#fff6ec',
-          100: '#ffead3',
-          200: '#ffd1a5',
-          300: '#ffb06d',
-          400: '#ff8232',
-          500: '#ff5f0a',
-          600: '#ff4500',
-          700: '#cc2f02',
-          800: '#a1250b',
-          900: '#82220c',
-          950: '#460d04',
+          DEFAULT: '#FF2700',
+          50: '#FFC3B8',
+          100: '#FFB1A3',
+          200: '#FF8F7A',
+          300: '#FF6C52',
+          400: '#FF4A29',
+          500: '#FF2700',
+          600: '#C71E00',
+          700: '#8F1600',
+          800: '#570D00',
+          900: '#1F0500',
+          950: '#030000',
         },
         purple: {
           DEFAULT: '#800080',

@@ -12,7 +12,9 @@
   let score = 0
 </script>
 
-<div class="relative flex flex-grow flex-col items-center gap-1 sm:flex-grow-0 sm:gap-2">
+<div
+  class="relative flex flex-grow flex-col items-center gap-1 sm:flex-grow-0 sm:flex-row sm:gap-2"
+>
   <Card {player} {color} bind:result={hs1} value={0} id={1} />
   <Card {player} {color} bind:result={hs2} value={0} id={2} />
   <Card {player} {color} bind:result={hs3} value={0} id={3} />

@@ -26,7 +26,9 @@
     player1 = []
     player2 = []
     // Little bit of a hack but I don't mind it
-    setTimeout(() => { $uncheck = false }, 1000);
+    setTimeout(() => {
+      $uncheck = false
+    }, 1000)
   }
 </script>
 

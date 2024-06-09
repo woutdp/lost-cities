@@ -14,7 +14,7 @@
   $: selectedCards = [...w, ...r, ...y, ...g, ...b, ...p]
 </script>
 
-<div class="flex flex-grow gap-1 sm:gap-2">
+<div class="flex flex-grow gap-1 sm:flex-col sm:gap-2">
   <Expedition {player} bind:selectedCards={w} name="Mountains" color="white" />
   <Expedition {player} bind:selectedCards={r} name="Volcano" color="red" />
   <Expedition {player} bind:selectedCards={y} name="Desert" color="yellow" />

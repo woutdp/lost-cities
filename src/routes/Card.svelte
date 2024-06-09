@@ -32,7 +32,7 @@
 <input id={identifier} name={identifier} type="checkbox" class="group peer hidden" bind:checked />
 <label
   for={identifier}
-  class={`${checked ? `bg-${color}-500 border-${color}-400 text-brown` : `text-${color}-700 peer-hover:bg-${color} border-${color}-900 `} flex h-full w-full cursor-pointer items-center justify-center rounded border text-4xl transition duration-200 sm:max-w-16`}
+  class={`${checked ? `bg-${color}-500 border-${color}-400 text-brown` : `text-${color}-700 peer-hover:bg-${color} border-${color}-700 `} flex h-full w-full cursor-pointer items-center justify-center rounded border text-4xl transition duration-200 sm:aspect-[2/3] sm:max-w-16`}
 >
   {#if value === 0}
     <Handshake />
