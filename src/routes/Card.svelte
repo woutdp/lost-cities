@@ -1,11 +1,17 @@
 <script lang="ts">
   import Handshake from './Handshake.svelte'
+  import { hasCard } from '$lib/store'
+  import { colorValueToCard } from '$lib/cards'
 
   export let color: string
   export let value: number = 0
   export let player: number = 0
   export let id: number = 0
+  export let result: string | null
 
+  $: card = colorValueToCard(color, value)
+  $: checked = hasCard(player, card)
+  $: result = (checked && card) || null
   $: identifier = `${id}:${player}-${color}-${value}`
 
   export let checked: boolean

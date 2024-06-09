@@ -31,3 +31,11 @@ export function getColor(card: string): string {
 export function getValue(card: string): number {
   return parseInt(card.substring(1))
 }
+
+export function colorToCode(color: string): string {
+  return color[0]
+}
+
+export function colorValueToCard(color: string, value: number): string {
+  return `${colorToCode(color)}${value}`
+}

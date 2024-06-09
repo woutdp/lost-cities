@@ -3,17 +3,10 @@
 // export const prerender = true
 
 import type { PageLoad } from './$types'
+import { parseQueryParams } from '$lib/parser'
 
 export const load: PageLoad = async ({ url }) => {
-  const player1 = (url.searchParams.get('p1') || '').split(',')
-  const player2 = (url.searchParams.get('p2') || '').split(',')
-  // console.log(player1)
-  // console.log(player2)
-  // console.log(url.searchParams.get("p1").split(','))
-  // console.log(url.searchParams.get("p2").split(','))
-  // console.log(url.searchParams.get("p3").split(','))
   return {
-    // serverMessage: data.serverMessage,
-    // universalMessage: 'hello from universal load function',
+    cardState: parseQueryParams(url.searchParams),
   }
 }
