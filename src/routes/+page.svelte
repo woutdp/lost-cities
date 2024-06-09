@@ -19,7 +19,7 @@
 </svelte:head>
 
 <div class="container mx-auto">
-  <h1 class="text-4xl font-bold pb-4 pt-4">Lost Cities Calculator</h1>
+  <h1 class="text-4xl font-bold pb-4 pt-4 hidden lg:block">Lost Cities Calculator</h1>
   <!-- {JSON.stringify(selectedCardsPlayer1)} test -->
   <ExpeditionsCalculator player={1} bind:selectedCards={player1} />
   <!-- <ExpeditionsCalculator player={2} bind:selectedCards={player2} /> -->

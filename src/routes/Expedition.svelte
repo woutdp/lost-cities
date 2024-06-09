@@ -13,7 +13,7 @@
 </script>
 
 <!-- <h2 class={`text-${color} pt-2`}>{name}</h2> -->
-<div class="flex flex-col items-center gap-2 relative">
+<div class="flex flex-col items-center gap-1 sm:gap-2 relative flex-grow">
   <Card {player} {color} bind:result={hs1} value={0} id="1" />
   <Card {player} {color} bind:result={hs2} value={0} id="2" />
   <Card {player} {color} bind:result={hs3} value={0} id="3" />
@@ -26,5 +26,4 @@
   <Card {player} {color} bind:result={c8} value={8} />
   <Card {player} {color} bind:result={c9} value={9} />
   <Card {player} {color} bind:result={c10} value={10} />
-  <p class="text-xl">{score}</p>
 </div>

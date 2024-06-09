@@ -23,7 +23,9 @@
   for={identifier}
   class={`
     ${checked ? `bg-${color} text-brown` : `text-${color} hover:bg-${color} hover:bg-opacity-10`}
-    border-2 border-${color} rounded aspect-[2/3] min-w-16 cursor-pointer flex justify-center items-center text-3xl transition duration-75
+    border-2 border-${color} rounded cursor-pointer flex justify-center items-center text-3xl transition duration-75
+    w-full h-full sm:max-w-16
+  
   `}
 >
   {#if value === 0}
