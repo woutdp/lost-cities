@@ -7,6 +7,13 @@ export function parseQueryParams(params: URLSearchParams) {
   return { player1, player2 }
 }
 
+export function parsedToQueryParams(parsed: { player1: string[]; player2: string[] }): string {
+  return new URLSearchParams({
+    p1: parsed.player1.join(','),
+    p2: parsed.player2.join(','),
+  }).toString()
+}
+
 function parsePlayer(playerString: string): string[] {
   return playerString
     .replace(/ /g, '')

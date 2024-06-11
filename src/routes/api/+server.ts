@@ -1,5 +1,5 @@
 import { json, error } from '@sveltejs/kit'
-import { parseQueryParams, validate } from '$lib/parser'
+import { parseQueryParams, parsedToQueryParams, validate } from '$lib/parser'
 import { score } from '$lib/scoring'
 
 import type { RequestHandler } from './$types'
@@ -12,5 +12,6 @@ export const GET: RequestHandler = ({ url }) => {
     return json({
       parsedInput: parsed,
       score: score(parsed),
+      url: `${url.origin}?${parsedToQueryParams(parsed)}`,
     })
 }

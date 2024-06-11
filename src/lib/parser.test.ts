@@ -1,5 +1,5 @@
 import { it, describe } from 'vitest'
-import { parseQueryParams, validate } from '$lib/parser'
+import { parseQueryParams, parsedToQueryParams, validate } from '$lib/parser'
 
 describe.concurrent('parseQueryParams', () => {
   it('empty', async ({ expect }) => {
@@ -93,5 +93,15 @@ describe.concurrent('validate', () => {
 
   it('invalid too many handshakes', async ({ expect }) => {
     expect(validate({ player1: ['b2', 'b0', 'b0'], player2: ['b2', 'b0', 'b0'] })).toBe(false)
+  })
+})
+
+describe.concurrent('parsedToQueryParams', () => {
+  it('empty', async ({ expect }) => {
+    expect(parsedToQueryParams({ player1: [], player2: [] })).toBe('p1=&p2=')
+  })
+
+  it('simple', async ({ expect }) => {
+    expect(parsedToQueryParams({ player1: ['b2'], player2: [] })).toBe('p1=b2&p2=')
   })
 })
